@@ -10,7 +10,10 @@ define(function(){
       this.projects = [];
       this.repos = [];
    }
-
+   var Member = function(){
+      this.name;
+      this.email;
+   }
    var Project = function (){
        this.name='';
        this.sprints = [];
