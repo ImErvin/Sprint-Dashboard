@@ -1,0 +1,23 @@
+{
+  "name": "dashboardbackend",
+  "version": "1.0.0",
+  "description": "Backend for Sprint Dashboard Backend for Effective JS Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ImErvin/Sprint-Dashboard.git"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "body-parser":"1.18.3"
+  },
+  "author": "Ervin Mamutov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImErvin/Sprint-Dashboard/issues"
+  },
+  "homepage": "https://github.com/ImErvin/Sprint-Dashboard#readme"
+}
