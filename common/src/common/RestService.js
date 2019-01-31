@@ -1,14 +1,15 @@
 define(
 ['jscore/ext/net','common/Models'], function(net,Models){
 
-     function getTeams(callback){
+
+     function getTeams(callback,error){
 
          net.ajax({
-            url: '/teams',
+            url: 'http://localhost:3010/teams',
             type: 'GET',
             dataType: 'json',
             success: callback,
-            error: callback
+            error: error
          });
      };
 

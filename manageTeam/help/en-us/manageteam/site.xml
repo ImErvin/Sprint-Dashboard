@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>ManageTeam</title>
+    <homeTitle>Home</homeTitle>
+    <home>
+        <blocks>
+            <block color="green" icon="screen" href="ui.xml">
+                <title>User Interface</title>
+                <desc>Learn the key elements of the user interface.</desc>
+            </block>
+            <block color="blue" icon="book" href="tutorials/map.xml">
+                <title>Tutorials</title>
+                <desc>Tutorials explain how to use key features in ManageTeam.</desc>
+            </block>
+            <block color="darkblue" icon="video" href="videos.xml">
+                <title>Videos</title>
+                <desc>Watch the available videos for ManageTeam.</desc>
+            </block>
+        </blocks>
+        <import type="list-titles" limit="3" conref="faq.xml" viewAll="View All"/>
+    </home>
+</site>
