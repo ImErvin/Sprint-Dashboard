@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2019 */
+
+define("widgets/WidgetCore",["jscore/core"],function(e){"use strict";return e.Widget.extend({_afterInit:function(e){this._createElement(),this.view&&this.view.afterRender&&this.view.afterRender(),this.onViewReady.apply(this,arguments)},getParentProperty:function(e){return this._parent.getProperty(e)},setModifiers:function(e){e.forEach(function(e){this.setModifier(e.name,e.value,e.prefix,e.element)},this)},setModifier:function(t,i,r,n){var s=n;(!s||!s instanceof e.Element)&&(s=this.getElement());var o=s.getAttribute("class");o&&s.setModifier(t,i,r)},removeModifier:function(t,i,r){var n=r;(!n||!n instanceof e.Element)&&(n=this.getElement());var s=n.getAttribute("class");s&&n.removeModifier(t,i)}})});

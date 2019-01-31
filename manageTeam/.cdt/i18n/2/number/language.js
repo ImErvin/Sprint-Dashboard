@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2019 */
+
+define("i18n/number/language",[],function(){return["be-nl","chs","cs","da-dk","de","de-ch","en-au","en-gb","en-us","es","es-ar","es-bo","es-cl","es-co","es-ec","es-es","es-gt","es-hn","es-mx","es-ni","es-pa","es-pe","es-py","es-sv","es-uy","es-ve","et","fi","fr","fr-ca","fr-ch","hu","it","ja","ko","nl-nl","pl","pt-br","pt-pt","ru","ru-ua","sk","th","tr","uk-ua","zh-cn","zh-hk","zh-mo"]});

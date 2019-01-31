@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2019 */
+
+define("i18n/utils/extObjectUtils",[],function(){"use strict";function t(t,r,e){function n(t){return!!t}if(!r||"string"!=typeof r)return t;e=e||{};var i=r.split("."),u=r;e.hasOwnProperty("defaultValue")&&(u=e.defaultValue);for(var f=0,l=i.length;f<l;f++)for(var s=i[f].split(/\[(\d+)]/).filter(n),o=0,a=s.length;o<a;o++){if(!t.hasOwnProperty(s[o]))return u;t=t[s[o]]}return t}function r(t){return JSON.parse(JSON.stringify(t))}return{clone:r,getProperties:t}});

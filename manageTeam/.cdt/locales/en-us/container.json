@@ -1,0 +1,22 @@
+{
+    "confirmNavigation": "Confirm Navigation",
+    "confirmNavigationMessage": "Are you sure that you want to leave this page?",
+    "leaveThisPage": "Leave this Page",
+    "stayOnThisPage": "Stay on this Page",
+    "failedToLoad": "Container failed to load",
+    "errors": {
+        "appNotFound":{
+            "title": "Application Not Found",
+            "description": "The requested application cannot be found.",
+            "possibleReasons":"Possible reasons:",
+            "incorrectURL":"The URL may be incorrect",
+            "appUnavailable": "The application may be temporarily unavailable",
+            "tryAgainOr":"Please try again or",
+            "selectAnotherApp": "select another application"
+        },
+        "appFailed":{
+            "title": "Application Failed",
+            "followingError": "The following error occurred:"
+        }
+    }
+}

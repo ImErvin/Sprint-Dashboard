@@ -1,0 +1,98 @@
+.ebSystemBar {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  z-index: 1500;
+  border-top: 4px solid #0066b3;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+  box-shadow: 0 1px 2px #D2D2D2;
+}
+.ebSystemBar::before {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: "";
+  font-size: 0;
+  background: #0066b3;
+  background: -o-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+  background: -moz-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+  background: -webkit-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+  background: -ms-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.1, #a2c517), color-stop(0.3, #009046), color-stop(0.5, #0082b6), color-stop(0.75, #151f77), color-stop(1, #db0050));
+  background: linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+}
+.ebSystemBar-logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 20px;
+  padding: 0 10px;
+  background: url('../resources/systemBar/econ01.svg') no-repeat center center transparent;
+  background-size: 20px;
+}
+.ebSystemBar-topMenuName {
+  display: inline-block;
+  padding: 0 5px 0 40px;
+  margin: 0;
+  line-height: 40px;
+  font-size: 16.8px;
+  color: #58585A;
+}
+.ebSystemBar-topMenu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  list-style: none;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.ebSystemBar-topMenu li {
+  display: inline-block;
+}
+.ebSystemBar-topMenu a {
+  padding: 0 5px 0 15px;
+  margin: 0;
+  font-size: 1.6em;
+  line-height: 40px;
+  color: #58585a;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ebSystemBar-topMenu a:hover {
+  color: #0066B3;
+}
+.ebSystemBar-rightButton {
+  float: right;
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.ebSystemBar-rightButton a {
+  display: block;
+  padding: 0 18px 0 18px;
+  font-size: 1.3rem;
+  color: #0066B3;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  border-left: solid 1px #D2D2D2;
+}
+.ebSystemBar-rightButton a:hover {
+  text-decoration: underline;
+}
+.ebSystemBar-rightButton:hover {
+  background-image: linear-gradient(180deg, #f2f2f2 0%, #e8e8e8 100%);
+}
+@media screen and (max-width: 640px) {
+  .ebSystemBar-topBar-rightButton a {
+    width: 0;
+    padding-left: 34px;
+    text-indent: -9999px;
+  }
+}

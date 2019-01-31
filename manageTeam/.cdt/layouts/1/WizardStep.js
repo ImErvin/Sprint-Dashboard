@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2018 */
+
+define("layouts/wizard/step/Step",["jscore/core"],function(i){return i.Widget.extend({_setWizard:function(i){this._wizard=i},_setIndex:function(i){this._index=i},isValid:function(){return!1},getWizard:function(){return this._wizard},reset:function(){},revalidate:function(){this._isValid=this.isValid(),this.trigger("revalidate",this._isValid)}})}),define("layouts/WizardStep",["layouts/wizard/step/Step"],function(i){return i});

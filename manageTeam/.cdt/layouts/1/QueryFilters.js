@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2018 */
+
+define("layouts/query_filters/QueryFilters",["layouts/TopSection","layouts/SlidingPanels"],function(t,e){return t.extend({onViewReady:function(){this.setContent(new e({context:this.options.context,main:this.options.main,left:this.options.left,right:this.options.right}))}})}),define("layouts/QueryFilters",["layouts/query_filters/QueryFilters"],function(t){return t});
