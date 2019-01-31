@@ -1,12 +1,17 @@
-var Team = function (name){
+var Team = function (name, members, projects, repos) {
     this.name = name;
-
+    this.members = members;
+    this.projects = projects;
+    this.repos = repos;
     return this;
 }
 
 Team.prototype = {
-    updateName: (newName) => {
-        this.name = newName;
+    updateTeam: (name, members, projects, repos) => {
+        this.name = name;
+        this.members = members;
+        this.projects = projects;
+        this.repos = repos;
     }
 }
 
