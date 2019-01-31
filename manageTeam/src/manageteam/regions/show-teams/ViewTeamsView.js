@@ -13,8 +13,10 @@ define([
             return mainViewTemplate;
         },
 
-        getTableRowTemplate: function(options){
-            return core.Element.parse(rowTemplate(options));
+        getTableRowTemplate: function(options , editCallBack){
+            var row = core.Element.parse(rowTemplate(options));
+            row.find(_classPrefix+"ebTable-body-row-editBtn").addEventHandler('click',editCallBack);
+            return row;
         },
 
         getStyle: function () {

@@ -17,7 +17,10 @@ define([
         renderTeams:function(teams){
            this.teams = teams;
            teams.forEach(function(team){
-               var element = this.view.getTableRowTemplate({teamName: team.name});
+               var element = this.view.getTableRowTemplate({teamName: team.name},function(){
+                   var eventTeam = team;
+                   console.log('team '+ eventTeam.name+' will be edited');
+               });
                this.view.addRowToTable(element);
             }.bind(this));
         },
