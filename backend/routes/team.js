@@ -15,6 +15,11 @@ router.route('/teams')
     res.status(200).send();
 });
 
+route.route('/teams/{name}')
+.get((req, res, next) => {
+    
+})
+
 
 
 module.exports = router;
