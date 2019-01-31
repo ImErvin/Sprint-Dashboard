@@ -6,7 +6,6 @@ define([
 		'i18n!manageteam/dictionary.json'
 	], function (core, View, restService, models, dictionary) {
 	'use strict';
-
 	return core.Region.extend({
 		View: View,
 		onStart: function () {

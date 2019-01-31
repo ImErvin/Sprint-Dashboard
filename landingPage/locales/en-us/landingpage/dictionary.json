@@ -1,0 +1,17 @@
+{
+    "all": "All",
+    "countOfTotal": "<count> of <total>",
+    "favorites": "Favorites",
+    "favoritesInfo": "Click on the star in the top right corner of an application box to mark/unmark it as a favorite.",
+    "preferencesSaved": "Preferences saved",
+    "show": "Show",
+    "gotoApp": "Go to <appName>",
+
+    "errorNoAppsTitle": "No Applications",
+    "errorNoAppsDescription": "No applications available to display. Please contact your system administrator.",
+
+    "infoNoFavoriteAppsTitle": "No Favorite Applications",
+    "infoNoFavoriteAppsDescription": "No favorite applications selected. You must select some favorite applications before choosing to display only favorites.",
+
+    "infoCustomLaunchAction": "Clicking an application tile can also perform a custom action, instead of launching a URL."
+}

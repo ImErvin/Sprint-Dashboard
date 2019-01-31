@@ -1,0 +1,21 @@
+<e-link src="./_launcherControls.less" />
+<div class="eaLandingPage-Controls">
+    <label class="ebLabel eaLandingPage-Controls-FavoritesLabel">
+        <span class="ebLabel-text ebLabel-text_width_auto ebText_lead eaLandingPage-Controls-FavoritesLabel-text">{{i18n.show}}</span>
+    </label>
+    <div class="eaLandingPage-Controls-FavoritesChoice">
+        <div class="ebBtnGroup eaLandingPage-Controls-FavoritesGroup">
+            <label>
+                <input type="radio" value="all" name="favoritesRadio" checked="checked"/>
+                <span class="ebBtn">{{i18n.all}}</span>
+            </label>
+            <label>
+                <input type="radio" value="favorites" name="favoritesRadio"/>
+                <span class="ebBtn"><i class="ebIcon ebIcon_star_yellow"></i> {{i18n.favorites}}</span>
+            </label>
+        </div>
+
+        <span class="eaLandingPage-Controls-AppCount"></span>
+    </div>
+    <e-element src="widgets/InfoPopup" class="eaLandingPage-Controls-FavoritesInfoPopup" e-id="favoritesInfo" e-options="favoritesInfoOptions"/>
+</div>

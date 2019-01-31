@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorial2">
+    <title>Tutorial 2</title>
+    <conbody>
+        <section>
+            <title>Tutorial 2</title>
+            <p>
+                Tutorial 2 Explanation.
+            </p>
+        </section>
+    </conbody>
+</concept>

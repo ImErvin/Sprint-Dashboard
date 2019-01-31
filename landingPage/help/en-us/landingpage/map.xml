@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+    <topicref href="overview.xml" navtitle="Overview" type="concept"/>
+    <topicref href="ui.xml" navtitle="User Interface" type="concept"/>
+    <topichead navtitle="Tutorials">
+        <topicref href="tutorials/tutorial1.xml" navtitle="Tutorial 1" type="concept"/>
+        <topicref href="tutorials/tutorial2.xml" navtitle="Tutorial 2" type="concept"/>
+    </topichead>
+    <topicref href="faq.xml" navtitle="Frequently Asked Questions" type="concept"/>
+    <topicref href="videos.xml" navtitle="Videos" type="concept"/>
+</map>
+
