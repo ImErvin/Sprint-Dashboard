@@ -1,5 +1,6 @@
 {
 	"exports": {
-		"common/Models": "common/Models"
+		"common/Models": "common/Models",
+        "common/RestService": "common/RestService"
 	}
 }
