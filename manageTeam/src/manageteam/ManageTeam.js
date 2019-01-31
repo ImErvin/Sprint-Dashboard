@@ -2,11 +2,13 @@ define([
     'jscore/core',
     'i18n!manageteam/dictionary.json',
     'layouts/TopSection',
-
-    './regions/show-teams/ViewTeamsRegion'
+    './regions/show-teams/ViewTeamsRegion',
+    './regions/add-team/AddTeamRegion'
 ], function (core, dictionary,
              TopSection,
-             ShowTeamsRegion) {
+             ShowTeamsRegion,
+             AddTeamRegion
+             ) {
 
     'use strict';
 
@@ -16,8 +18,7 @@ define([
          * Called when the app is first instantiated in the current tab for the first time.
          */
         onStart: function () {
-            var eventBus = this.getEventBus(),
-                topSection = new TopSection({
+            var topSection = new TopSection({
                     breadcrumb: this.options.breadcrumb,
                     title: this.options.properties.title,
                     context: this.getContext(),
@@ -29,13 +30,21 @@ define([
                         }
                     }]
                 });
+            this.showTeamsRegion = new ShowTeamsRegion({context: this.getContext()});
 
 
-            topSection.setContent(new ShowTeamsRegion   ({
-
-                context: this.getContext()
-            }));
+            topSection.setContent(this.showTeamsRegion);
             topSection.attachTo(this.getElement());
+            var subscriptionId = this.getEventBus().subscribe('switchMessage',function(data){
+                       if( data.region === 'ShowTeams'){
+                           topSection.setContent(this.showTeamsRegion);
+                           this.addEditTeamRegion.stop();
+
+                       }else if(data.region === 'EditTeam'){
+                           this.addEditTeamRegion = new AddTeamRegion({context: this.getContext(), team: data.team});
+                           topSection.setContent(this.addEditTeamRegion);
+                       }
+                   }.bind(this));
         },
 
         /**
