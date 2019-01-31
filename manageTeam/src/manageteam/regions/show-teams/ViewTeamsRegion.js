@@ -14,10 +14,11 @@ define([
         },
 
         renderTeams:function(teams){
+           this.teams = teams;
            teams.forEach(function(team){
                var element = this.view.getTableRowTemplate({teamName: team.name});
                this.view.addRowToTable(element);
-            });
+            }.bind(this));
         },
 
         error:function(err){

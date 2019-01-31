@@ -3,8 +3,10 @@ const app = express();
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 3010;
 const teamsRoutes = require('./routes/team');
+const cors = require('cors');
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use('/', teamsRoutes);
 
 app.get('/', (req, res) => {
