@@ -11,7 +11,7 @@ router.route('/teams')
     res.status(201).send();
 })
 .put((req, res, next) => {
-    //mock.updateTeam(req.body);
+   
     res.status(200).send();
 });
 
