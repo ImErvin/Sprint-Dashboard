@@ -21,17 +21,11 @@ define([
             return styles;
         },
 
-        addRowToTable:function(){
-           return this.getElement().find(_classPrefix+'sendBtn');
+        addRowToTable:function(rowElement){
+           return this.getElement().find(_classPrefix+'ebTable-body').append(rowElement);
         },
 
-        getReveivedList:function(){
-           return this.getElement().find(_classPrefix+'receivedList');
-        },
 
-        getMessage:function(){
-          return this.getElement().find(_classPrefix+'sendMessage');
-        }
     });
 
 });
