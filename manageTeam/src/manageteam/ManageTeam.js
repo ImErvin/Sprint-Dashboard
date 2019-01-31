@@ -2,10 +2,10 @@ define([
     'jscore/core',
     'i18n!manageteam/dictionary.json',
     'layouts/TopSection',
-    './regions/main/Main'
+    './regions/show-teams/ViewTeamsRegion'
 ], function (core, dictionary,
              TopSection,
-             Main) {
+             ShowTeamsRegion) {
     'use strict';
 
     return core.App.extend({
@@ -28,7 +28,7 @@ define([
                     }]
                 });
 
-            topSection.setContent(new Main({
+            topSection.setContent(new ShowTeamsRegion   ({
                 context: this.getContext()
             }));
             topSection.attachTo(this.getElement());
