@@ -11,8 +11,9 @@
     "url": "git+ssh://git@github.com/ImErvin/Sprint-Dashboard.git"
   },
   "dependencies": {
+    "express": "4.16.4",
     "body-parser": "1.18.3",
-    "express": "^4.16.4"
+    "cors": "2.8.5"
   },
   "author": "Ervin Mamutov",
   "license": "ISC",
