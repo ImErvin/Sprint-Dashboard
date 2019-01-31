@@ -3,6 +3,7 @@ define([
     './ViewTeamsView',
     'common/RestService',
     'common/Models',
+    '../../widgets/team-form/TeamForm',
     'i18n!manageteam/dictionary.json'
 ], function (core, View, restService , models , dictionary) {
     'use strict';
