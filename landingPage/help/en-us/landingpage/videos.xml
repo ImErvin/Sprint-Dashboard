@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Videos">
+    <title>Videos</title>
+    <conbody>
+        <object type="video" data="resources/video.mp4">
+            <desc>My Video</desc>
+        </object>
+    </conbody>
+</concept>

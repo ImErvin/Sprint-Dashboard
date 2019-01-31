@@ -1,0 +1,31 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "landingpage",
+        "name": "LandingPage",
+        "version": "1.0.0",
+        "skeleton": "2.3.1",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "jscore": "1.8.0",
+        "widgets": "1.9.0",
+        "container": "1.14.12",
+        "i18n": "2.4.8",
+        "assets": "1.10.3",
+        "layouts": "1.8.14",
+        "uit": "0.3.5"
+    }
+}

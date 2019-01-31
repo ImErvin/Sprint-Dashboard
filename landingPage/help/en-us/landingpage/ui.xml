@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="UserInterface">
+    <title>User Interface</title>
+    <conbody>
+        <section>
+            <title>Some UI Component</title>
+            <p>
+                A description of the UI component in the title.
+            </p>
+            <sectiondiv>
+                <p><b>Sub-Heading</b></p>
+                <p>
+                    Something about Sub-Heading.
+                </p>
+            </sectiondiv>
+        </section>
+    </conbody>
+</concept>
