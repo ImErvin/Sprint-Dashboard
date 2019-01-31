@@ -5,7 +5,7 @@ define([
 ], function (core, template, styles) {
     'use strict';
 
-    const _prefix = '.eaManageTeam-rAddTeam';
+    var _prefix = '.eaManageTeam-rAddTeam';
 
     return core.View.extend({
 
