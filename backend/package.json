@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "express": "4.16.4",
-    "body-parser":"1.18.3"
+    "body-parser": "1.18.3"
   },
   "author": "Ervin Mamutov",
   "license": "ISC",
