@@ -41,6 +41,7 @@ define([
                            this.addEditTeamRegion.stop();
 
                        }else if(data.region === 'EditTeam'){
+                           this.showTeamsRegion.stop();
                            this.addEditTeamRegion = new AddTeamRegion({context: this.getContext(), team: data.team});
                            topSection.setContent(this.addEditTeamRegion);
                        }

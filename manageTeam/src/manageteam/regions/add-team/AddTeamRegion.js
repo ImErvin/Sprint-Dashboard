@@ -1,25 +1,49 @@
 define([
     'jscore/core',
     './AddTeamView',
+    'common/Models',
     'i18n!manageteam/dictionary.json'
-], function (core, View, dictionary) {
+], function (core, View, Models, dictionary) {
     'use strict';
+
+    var teamData;
 
     return core.Region.extend({
 
-        View: View,
+        view: function () {
+            return new View({
+                team: teamData
+            })
+        },
+        
+        init: function(teamInfo){
+            teamData = teamInfo.team;
+        },
 
         onStart: function () {
-            var count = 0;
+            this.view.getNameInput().setValue(teamData.name);
+            this.view.getMembersInput().setValue(teamData.members);
+            this.view.getProjectInput().setValue(teamData.projects);
+            this.view.getReposInput().setValue(teamData.repos);
+            this.view.addSaveEventHandler(function () {
+                var team = {
+                    name:  this.view.getNameInput().getValue(),
+                    members:  this.view.getMembersInput().getValue(),
+                    projects:  this.view.getProjectInput().getValue(),
+                    repos:  this.view.getReposInput().getValue()
+                }
 
-            this.sayHelloEvtId = this.getEventBus().subscribe('sayhello', function () {
-                count++;
-                this.view.getHello().setText(dictionary.hello + ' ' + count);
+                this.getEventBus().publish('switchMessage', {
+                    region: 'ShowTeams',
+                    team: team
+                });
             }.bind(this));
         },
 
+
+
         onStop: function () {
-            this.getEventBus().unsubscribe('sayhello', this.sayHelloEvtId);
+
         }
 
     });
