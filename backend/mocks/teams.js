@@ -16,8 +16,23 @@ addTeam = (team) => {
     getTeams.push(newTeam);
 }
 
+updateTeam = (team) => {
+    var index = function () {
+        for(var i in getTeams){
+            console.log(i);
+            if (i.name == team.name){
+                return getTeams.indexOf(i);
+            }
+        }
+    }();
+
+    getTeams[index] = team;
+    console.log(getTeams);
+}
+
 
 module.exports = {
     getTeams: getTeams,
-    addTeam: addTeam
+    addTeam: addTeam,
+    updateTeam: updateTeam
 };
