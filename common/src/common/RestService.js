@@ -42,7 +42,7 @@ define(
     return {
       getTeams: getTeams,
       putTeams: putTeams,
-      addTeam: addTeam;
+      addTeam: addTeam
     };
 
   }
