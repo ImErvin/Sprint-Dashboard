@@ -7,7 +7,6 @@ router.route('/teams')
     res.status(200).json(mock.getTeams);
 })
 .post((req, res, next) => {
-    console.log(req);
     mock.addTeam(req.body);
     res.status(201).send();
 })

@@ -58,12 +58,13 @@ define([
                     }
 
 
-                    RestService.postTeam(team, function (data) {
+                    RestService.postTeam(team, function () {
+                        console.log("11");
                         this.getEventBus().publish('switchMessage', {
                             region: 'ShowTeams',
                             team: team
                         });
-                    }.bind(this), function (data) { console.log(data) });
+                    }.bind(this), function () { console.log("error")});
 
                 }.bind(this));
             }
