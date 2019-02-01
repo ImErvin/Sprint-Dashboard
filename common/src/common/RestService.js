@@ -3,7 +3,7 @@ define(
 
 
     function getTeams(callback, error) {
-
+      console.log("made a call");
       net.ajax({
         url: 'http://localhost:3010/teams',
         type: 'GET',
@@ -26,9 +26,23 @@ define(
       })
     }
 
+    function addTeam(data, callback, error) {
+      console.log(data);
+      net.ajax({
+        url: 'http://localhost:3010/teams',
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: callback,
+        error: error
+      })
+    }
+
     return {
       getTeams: getTeams,
-      putTeams: putTeams
+      putTeams: putTeams,
+      addTeam: addTeam;
     };
 
   }
