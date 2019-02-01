@@ -12,6 +12,7 @@ router.route('/teams')
 })
 .put((req, res, next) => {
     mock.updateTeam(req.body);
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8585');
     res.status(204).send();
 });
 

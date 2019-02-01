@@ -17,17 +17,14 @@ addTeam = (team) => {
 }
 
 updateTeam = (team) => {
-    var index = function () {
-        for(var i in getTeams){
-            console.log(i);
-            if (i.name == team.name){
-                return getTeams.indexOf(i);
-            }
-        }
-    }();
+    var index;
 
+    for(var i of getTeams){
+        if(team.name == i.name){
+            index = getTeams.indexOf(i);
+        }
+    }
     getTeams[index] = team;
-    console.log(getTeams);
 }
 
 
