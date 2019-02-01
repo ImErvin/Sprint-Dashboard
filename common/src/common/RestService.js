@@ -3,7 +3,7 @@ define(
 
 
     function getTeams(callback, error) {
-
+      console.log("made a call");
       net.ajax({
         url: 'http://localhost:3010/teams',
         type: 'GET',

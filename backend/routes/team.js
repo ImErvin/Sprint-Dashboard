@@ -4,7 +4,7 @@ const mock = require("../mocks/teams");
 
 router.route('/teams')
 .get((req, res, next) => {
-    res.status(200).send(mock.getTeams);
+    res.status(200).json(mock.getTeams);
 })
 .post((req, res, next) => {
     mock.addTeam(req.body);
@@ -13,7 +13,7 @@ router.route('/teams')
 .put((req, res, next) => {
     mock.updateTeam(req.body);
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8585');
-    res.status(204).send();
+    res.status(204).json();
 });
 
 router.route('/teams/{name}')

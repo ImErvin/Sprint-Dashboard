@@ -10,7 +10,6 @@ define([
 		View: View,
 		onStart: function () {
 			restService.getTeams(this.renderTeams.bind(this), this.error.bind(this));
-
 			var subscriptionId = this.getEventBus().subscribe('teamEdit', function (data) {
 				this.teams.forEach(function (t) {
 					if (t.name === data.team.name) {
@@ -21,9 +20,10 @@ define([
 
 		},
 
-		renderTeams: function (teams) {
-			this.teams = teams;
-			teams.forEach(function (team) {
+		renderTeams: function (data) {
+			console.log(data);
+			this.teams = data;
+			data.forEach(function (team) {
 				var element = this.view.getTableRowTemplate({
 					team: team
 				}, function () {
@@ -40,7 +40,9 @@ define([
 				.bind(this));
 		},
 
-		error: function (err) { }
+		error: function (err) {
+			console.log("Error");
+		 }
 
 	});
 });

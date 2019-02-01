@@ -33,12 +33,14 @@ define([
                     repos:  this.view.getReposInput().getValue()
                 }
 
-                RestService.putTeams(team, function (data) { console.log(data) }, function (data) { console.log("error") });
+                RestService.putTeams(team, function (data) { 
+                    this.getEventBus().publish('switchMessage', {
+                        region: 'ShowTeams',
+                        team: team
+                    });
+                 }.bind(this), function (data) { console.log("error") });
 
-                this.getEventBus().publish('switchMessage', {
-                    region: 'ShowTeams',
-                    team: team
-                });
+                
             }.bind(this));
         },
 
