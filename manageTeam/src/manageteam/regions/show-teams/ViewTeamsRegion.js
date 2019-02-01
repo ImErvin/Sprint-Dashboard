@@ -25,7 +25,7 @@ define([
 
 		renderTeams: function (teams) {
 			this.teams = teams;
-			teams.forEach(function (team) {
+			this.teams.forEach(function (team) {
 				var element = this.view.getTableRowTemplate({
 					team: team
 				}, function () {

@@ -1,9 +1,9 @@
 define([
     'jscore/core',
     './AddTeamView',
-    'common/Models',
+    'common/RestService',
     'i18n!manageteam/dictionary.json'
-], function (core, View, Models, dictionary) {
+], function (core, View, RestService, dictionary) {
     'use strict';
 
     var teamData;
@@ -32,6 +32,9 @@ define([
                     projects:  this.view.getProjectInput().getValue(),
                     repos:  this.view.getReposInput().getValue()
                 }
+
+
+                RestService.putTeams(team, function (data) { console.log(data) }, function (data) { console.log("error") })
 
                 this.getEventBus().publish('switchMessage', {
                     region: 'ShowTeams',

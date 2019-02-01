@@ -24,7 +24,8 @@ define([
                     context: this.getContext(),
                     defaultActions: [{
                         type: 'button',
-                        name: dictionary.sayHello,
+                        name: "Add Team",
+                        //Call the redion here
                         action: function () {
                             eventBus.publish('sayhello');
                         }
