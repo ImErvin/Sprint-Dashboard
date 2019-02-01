@@ -20,11 +20,11 @@ define([
                     "appName": "TeamManagement",
                     "title": "Team Management",
                     "subtitle": "Manage Teams",
-                    "url": "#ManageTeam",
+                    "url": "#manageteam",
                     "icon": "eye",
                     "color": "#ff7600",
                     "description": "Manage, Create, Edit and Delete Teams",
-                    "favorite": true
+                    "favorite": false
                 },
                 {
                     "appName": "metricsmnagement",

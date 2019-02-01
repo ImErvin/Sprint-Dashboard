@@ -20,6 +20,14 @@ define([
 
         getMessage: function () {
             return this.getElement().find(".eaLandingPage-Message");
+        },
+
+        // addApplication: function(){
+        //     this.getElement().find('./manageTeam.js').addEventHandler('click', fn);
+        // },
+
+        getApplication: function(){
+            return this.getElement().find('./manageTeam.js');
         }
 
     });
