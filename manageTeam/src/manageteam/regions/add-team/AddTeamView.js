@@ -1,8 +1,9 @@
 define([
     'jscore/core',
     'template!./_addTeam.html',
+    'template!./_editTeam.html',
     'styles!./_addTeam.less'
-], function (core, template, styles) {
+], function (core, addTemplate, editTemaplte, styles) {
     'use strict';
 
     var _prefix = '.eaManageTeam-rAddTeam';
@@ -10,7 +11,12 @@ define([
     return core.View.extend({
 
         getTemplate: function () {
-            return template(this.options);
+            console.log(this.options);
+            if(!this.options){
+                return editTemaplte(this.options);
+            }else{
+                return addTemplate();
+            }
         },
 
         getStyle: function () {

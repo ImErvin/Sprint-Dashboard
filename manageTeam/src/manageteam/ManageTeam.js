@@ -27,8 +27,10 @@ define([
                         name: "Add Team",
                         //Call the redion here
                         action: function () {
-                            eventBus.publish('sayhello');
-                        }
+                            this.getEventBus().publish('switchMessage', {
+                                region: 'AddTeam'
+                            });
+                        }.bind(this)
                     }]
                 });
             this.showTeamsRegion = new ShowTeamsRegion({context: this.getContext()});
@@ -40,12 +42,17 @@ define([
                        if( data.region === 'ShowTeams'){
                            topSection.setContent(this.showTeamsRegion);
                            this.addEditTeamRegion.stop();
-
+                        
                        }else if(data.region === 'EditTeam'){
                            this.showTeamsRegion.stop();
                            this.addEditTeamRegion = new AddTeamRegion({context: this.getContext(), team: data.team});
                            topSection.setContent(this.addEditTeamRegion);
-                       }
+                       }else if(data.region === 'AddTeam'){
+                            this.showTeamsRegion.stop();
+                            this.addEditTeamRegion = new AddTeamRegion({context: this.getContext(), team: undefined});
+                            topSection.setContent(this.addEditTeamRegion);
+                        }
+                       
                    }.bind(this));
         },
 
