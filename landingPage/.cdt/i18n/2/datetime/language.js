@@ -1,0 +1,3 @@
+/* Copyright (c) Ericsson 2019 */
+
+define("i18n/datetime/language",[],function(){return["ar","ar-ma","bg","br","bs","ca","cs","cv","cy","da","de","el","en-au","en-ca","en-gb","en-us","eo","es","es-ar","es-bo","es-cl","es-co","es-ec","es-es","es-gt","es-hn","es-mx","es-ni","es-pa","es-pe","es-py","es-sv","es-uy","es-ve","et","eu","fa","fi","fo","fr","fr-ca","gl","he","hi","hr","hu","id","is","it","ja","ka","ko","lb","lt","lv","mk","ml","mr","ms-my","nb","ne","nl","nn","pl","pt","pt-br","ro","rs","ru","sk","sl","sq","sv","ta","th","tl-ph","tr","tzm","tzm-la","uk","uz","vn","zh-cn","zh-hk","zh-mo","zh-tw"]});
