@@ -15,7 +15,7 @@ router.route('/teams')
     res.status(200).send();
 });
 
-route.route('/teams/{name}')
+router.route('/teams/{name}')
 .get((req, res, next) => {
     
 })

@@ -27,7 +27,14 @@ define([
            return this.getElement().find(_classPrefix+'ebTable-body').append(rowElement);
         },
 
+        resetTeamTable:function(){
+            console.log( this.getElement().find(_classPrefix+'ebTable-body').children()) ;
+            var s = this.getElement().find(_classPrefix+'ebTable-body');
+            this.getElement().find(_classPrefix+'ebTable-body').children().forEach(element => {
+                element.remove();
+            });
+        }
 
-    });
-
+   });
 });
+

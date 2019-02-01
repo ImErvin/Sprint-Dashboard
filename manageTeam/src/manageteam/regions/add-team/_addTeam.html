@@ -1,20 +1,31 @@
 <div class="eaManageTeam-rAddTeam">
-    <form>
-        <label class="ebLabel">
-            Team Name
-            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin" placeholder="Input" />
-        </label>
-        <label class="ebLabel">
-            Team Members
-            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin" placeholder="Input" />
-        </label>
-        <label class="ebLabel">
-            Team Project
-            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin" placeholder="Input" />
-        </label>
-        <label class="ebLabel">
-            Team Repos
-            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin" placeholder="Input" />
-        </label>
+    <h2>Editing Team {{ team.name }}</h2>
+
+    <form class="eb_wMargin">
+        <label class="ebLabel eb_wMargin">
+            Name
+            <input type="text" readonly class="ebInput ebInput_labeled_top eb_wMargin eaManageTeam-rAddTeam-nameInput"
+                placeholder="Enter Team Name" />
+        </label><br />
+        <label class="ebLabel eb_wMargin">
+            Members
+            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin eaManageTeam-rAddTeam-membersInput"
+                placeholder="Add Team Member" />
+            <ul class="ebList ebList_striped eaManageTeam-rAddTeam-membersList">
+            </ul>
+        </label><br />
+        <label class="ebLabel eb_wMargin">
+            Project
+            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin eaManageTeam-rAddTeam-projectInput"
+                placeholder="Enter project name" />
+        </label><br />
+        <label class="ebLabel eb_wMargin">
+            Repos
+            <input type="text" class="ebInput ebInput_labeled_top eb_wMargin eaManageTeam-rAddTeam-reposInput"
+                placeholder="Enter project repository" />
+        </label><br />
+        <separator />
+        <button class="ebBtn eb_wMargin eb ebBtn_color_green eaManageTeam-rAddTeam-saveBtn"><i class="ebIcon ebIcon_add_white"></i>
+            <span>Save</span></button>
     </form>
 </div>

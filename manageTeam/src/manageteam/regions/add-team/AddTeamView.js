@@ -1,6 +1,6 @@
 define([
     'jscore/core',
-    'text!./_addTeam.html',
+    'template!./_addTeam.html',
     'styles!./_addTeam.less'
 ], function (core, template, styles) {
     'use strict';
@@ -10,7 +10,7 @@ define([
     return core.View.extend({
 
         getTemplate: function () {
-            return template;
+            return template(this.options);
         },
 
         getStyle: function () {
@@ -19,8 +19,31 @@ define([
 
         getHello: function () {
             return this.getElement().find(_prefix + '-hello');
-        }
+        },
 
+        getNameInput: function () {
+            return this.getElement().find(_prefix + '-nameInput');
+        },
+
+        getMembersInput: function () {
+            return this.getElement().find(_prefix + '-membersInput');
+        },
+
+        getProjectInput: function () {
+            return this.getElement().find(_prefix + '-projectInput');
+        },
+
+        getReposInput: function () {
+            return this.getElement().find(_prefix + '-reposInput');
+        },
+
+        getSaveButton: function () {
+            return this.getElement().find(_prefix + "-saveBtn");
+        },
+
+        addSaveEventHandler: function (saveCallBack) {
+            this.getSaveButton().addEventHandler('click', saveCallBack);
+        }
     });
 
 });
